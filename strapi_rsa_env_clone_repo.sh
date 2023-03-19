@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Create public_html
+mkdir public_html
+
 # Script to Generate RSA Key
 generate_rsa_key() {
     # Prompt the user for the location to save the key
@@ -116,7 +119,7 @@ SMTP_PASS=$smtp_pass
 FROM_EMAIL=$from_email
 FROM_NAME=$from_name
 EOF
-    
+    mv .env public_html
     echo "Strapi .env file created"
 }
 
@@ -126,7 +129,7 @@ clone_repository() {
     read -p "Enter the repository URL: " repo_url
     
     # Clone the repository
-    git clone $repo_url
+    git clone $repo_url public_html
     
     echo "Repository cloned"
 }
