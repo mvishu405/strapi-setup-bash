@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create public_html
-mkdir public_html
+# mkdir public_html
 
 # Script to Generate RSA Key
 generate_rsa_key() {
@@ -119,7 +119,7 @@ SMTP_PASS=$smtp_pass
 FROM_EMAIL=$from_email
 FROM_NAME=$from_name
 EOF
-    mv .env public_html
+    # mv .env public_html
     echo "Strapi .env file created"
 }
 
